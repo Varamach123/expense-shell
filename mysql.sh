@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 USERID=$(id -u)
@@ -9,7 +8,6 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
-
 
 VALIDATE(){
    if [ $1 -ne 0 ]
@@ -29,7 +27,6 @@ else
     echo "You are super user."
 fi
 
-
 dnf install mysql-server -y &>>$LOGFILE
 VALIDATE $? "Installing MySQL Server"
 
@@ -41,4 +38,3 @@ VALIDATE $? "Starting MySQL Server"
 
  mysql_secure_installation --set-root-pass ExpenseApp@1 &>>$LOGFILE
  VALIDATE $? "Setting up root password"
-
