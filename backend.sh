@@ -44,3 +44,4 @@ VALIDATE $? "Installing nodejs"
    VALIDATE $? "create expense user"
 else
    echo -e "expense user already ceated.. $Y Skipping $N"
+   fi
